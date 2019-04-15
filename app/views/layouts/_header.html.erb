@@ -1,0 +1,26 @@
+<div class="row justify-content-center">
+    <div class="">
+        <h3>Welcome to Hacker News Stories</h3>
+        <p>Giving you all latest stories at your finger tips!!</p>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-12 col-md-10 col-lg-8">
+        <div class="">
+            <div class="card-body row no-gutters align-items-center">
+                <div class="col-auto">
+                    <i class="fas fa-search h4 text-body"></i>
+                </div>
+                <%= form_tag(home_search_path, :method => "get", id: "search-form") do %>
+	                <div class="col">
+	                	<%= text_field_tag :search, params[:search], placeholder: "Search news", class: 'form-control form-control-lg',
+	                	type: "search" %>
+	                </div>
+	                <div class="col-auto">
+	                	<%= submit_tag "Search", class: 'btn btn-lg btn-success' %>
+	                </div>
+	            <% end %>
+            </div>
+        </div>
+    </div>
+</div>
